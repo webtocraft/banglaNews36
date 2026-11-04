@@ -13,7 +13,7 @@ interface News {
 const CategoryPage = async ({ params }: { params: { categoryId: string } }) => {
   const { categoryId } = await params;
   const res = await fetch(
-    `https://news-api-v2.vercel.app/api/category/${categoryId}`,
+    `https://newsicapi.vercel.app/api/category/${categoryId}`,
   );
   const data = await res.json();
   const categoryNews: News[] = data.data;
